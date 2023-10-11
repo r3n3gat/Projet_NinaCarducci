@@ -138,7 +138,8 @@
 	<div class="quote">
 		<figure>
 			<blockquote>
-				<h1 class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</h1>
+				<h3 class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, 
+				il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</h3>
 			</blockquote>
 			<figcaption class="quote__author">- Richard Avedon</figcaption>
 		</figure>
@@ -183,7 +184,8 @@
 <div class="quote">
 	<figure>
 		<blockquote>
-			<h1 class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</h1>
+			<h3 class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou 
+			une nostalgie capable de résumer ou plus exactement de révéler une vie</h3>
 		</blockquote>
 		<figcaption class="quote__author">- Richard Avedon</figcaption>
 	</figure>
@@ -194,21 +196,46 @@
 			<h3>Une question ? Une demande de devis ?</h3>
 			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
 			<form action="" method="post">
-				<label>Nom</label>
-				<input type="text" name="nom" id="nom">
-				<label>Email</label>
-				<input type="email" name="email" id="email">
-				<label>Message</label>
-				<textarea name="message" id="message" cols="30" rows="10"></textarea>
-				<input type="submit" value="Envoyer"/>
+                <label for="nom">Nom</label aria-labelledby="nom">
+					<input type="text" name="nom" id="nom">
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" aria-labelledby="email">
+					<label for="message">Message</label>
+					<textarea name="message" id="message" cols="30" rows="10" aria-labelledby="message"></textarea>
+					<input type="submit" value="Envoyer" />
 			</form>
 		</div>
 		<div class="picture right">
-			<img src="./assets/images/camera.png" alt="portait d'un appareil photo">
+			<img src="./assets/images/camera.webp" alt="portait d'un appareil photo" loading="lazy">
 		</div>
 	</div>
 </div>
+<script type="application/ld+json">
+	{
+		"@context" : "https://schema.org",
+		"@type" : "LocalBusiness",
+		"name" : "Nina Carducci",
+		"image" : "https://root-c137.github.io/NinaCarducci/assets/images/nina.webp",
+		"description" : "Photographe professionnelle en île-de-France",
+		"address" : {
+			"@type" : "PostalAddress",
+			"streetAddress" : "68 avenue Alsace-Lorraine, 33200 Bordeaux",
+			"addressLocality" : "Bordeaux",
+			"postalCode" : "33200",
+			"addressCountry" : "FR"
+		},
 
+		"telephone" : "05 56 67 78 89",
+		"url" : "https://root-c137.github.io/NinaCarducci/",
+		"priceRange" : "de 50€ à 400€",
+		"openingHoursSpecification" : {
+			"@type" :  "OpeningHoursSpecification",
+			"dayOfWeek" : ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+			"opens" : "10:00",
+			"closes" : "19:00"
+		}
+	}
+    </script>
 		<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
